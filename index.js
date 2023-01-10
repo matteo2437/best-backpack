@@ -34,6 +34,9 @@ const fillBackpack = (backpack) => {
     backpack.push(item)
   }
 
+  if(getWeight(backpack) > backpackSize)
+    backpack.pop()
+
   return backpack
 }
 
