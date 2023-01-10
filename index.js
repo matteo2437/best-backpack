@@ -69,8 +69,8 @@ const getBest = (backpacks) => {
   })
 }
 
-
-backpacks = fillBackpacks(backpacks);
+const findBestBackpack = () => {
+  backpacks = fillBackpacks(backpacks);
 
 [...Array(50)].forEach(() => {
   const best = getBest(backpacks)
@@ -79,7 +79,10 @@ backpacks = fillBackpacks(backpacks);
   backpacks = swapItemsAllBackpacks(backpacks)
 })
 
-const best = getBest(backpacks)
+  return getBest(backpacks)
+}
+
+const best = findBestBackpack(backpacks)
 const value = getValue(best)
 const weight = getWeight(best)
 
